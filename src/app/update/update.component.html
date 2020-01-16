@@ -1,0 +1,34 @@
+<hr>
+<style>
+  .no-style .ng-valid {
+  border-left: 1px  solid #CCC
+}
+
+  .no-style .ng-invalid {
+  border-left: 1px  solid #CCC
+}
+</style>
+  <div class="col-md-6">  
+    <div class="container">
+    <h2 class="text-center">Edit Employee</h2>
+    <br>
+    <form (ngSubmit)="editEmployees(fname)" #fname="ngForm">
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input #id type="text" [(ngModel)] = "employees.id" name="id">     
+       </div>
+  
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" [(ngModel)] = "employees.username" name="username">     
+       </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)] = "employees.description" name="description">
+      </div>
+        <div class="button">
+          <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+    </form>
+  </div>
+  </div>

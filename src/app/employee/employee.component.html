@@ -1,0 +1,18 @@
+<div style="text-align: center"><button class="btn btn-primary" (click) ="onAdd()">Add</button></div>
+
+  <div class="container">
+    <table class="table table-bordered table-dark">
+      <th>ID</th>
+      <th>Username</th>
+      <th>Description</th>
+      <th>Delete</th>
+      <th>Update</th>
+      <tr *ngFor= "let employees of employees">
+        <td>{{employees.id}}</td>
+        <td>{{employees.username}}</td>
+        <td>{{employees.description}}</td>
+        <td><button class="btn btn-primary" (click) ="onDelete(employees.id)">Delete</button></td>
+        <td><button class="btn btn-primary" (click) ="onUpdate(employees)">Update</button></td>
+      </tr>
+    </table> 
+    </div>

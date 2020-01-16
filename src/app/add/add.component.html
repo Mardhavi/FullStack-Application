@@ -1,0 +1,35 @@
+<hr>
+<style>
+  .no-style .ng-valid {
+  border-left: 1px  solid #CCC
+}
+
+  .no-style .ng-invalid {
+  border-left: 1px  solid #CCC
+}
+</style>
+<div class="no-style" style="margin-left: 4px">
+  <div class="container">
+      <h1>Add Details</h1>
+      <form (ngSubmit)="createDetails(fname)" #fname="ngForm">
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input #id ngModel="id" name="id" type="text" class="form-control" id="id">
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input #username ngModel="username" name="username" type="text" class="form-control" id="username">
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input  #description ngModel="description" name="description" type="text" class="form-control" id="description">
+        </div>
+<div style="text-align: center">
+        <button type="submit" class="btn btn-success">Submit</button>
+</div>
+
+      </form>
+  </div>
+  <button class="btn btn-primary" (click)= "onBack()">Back</button>
